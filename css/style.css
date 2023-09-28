@@ -111,11 +111,17 @@ header .image::before{
    top: 0;
    left: 50%;
    transform: translate(-50%);
-   font-size: 30rem;
+   font-size: 38rem;
    font-weight: 400;
    line-height: 20rem;
    color: yellow;
    opacity: 0.2;
+   z-index: -100;
+}
+
+header .image img{
+   max-width: 600px;
+   margin:auto
 }
 
 header .content h4{
@@ -333,10 +339,10 @@ footer .column > a:hover{
    header .image{
       grid-area: 1/1/2/2;
    }
-   .slide-container{
+   .swiper-wrapper{
       grid-template-columns: repeat(2, 1fr);
    }
    footer{
-      grid-template-columns: 1fr 150px;
+      grid-template-columns: 9fr 150px;
    }
 }   

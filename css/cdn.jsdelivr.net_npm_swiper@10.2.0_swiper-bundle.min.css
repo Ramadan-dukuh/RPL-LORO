@@ -31,7 +31,8 @@
 }
 .swiper-wrapper {
   z-index: 1;
-  display: flex;
+  display: flex;;
+  width: 100%;
   transition-property: transform;
   transition-timing-function: var(
     --swiper-wrapper-transition-timing-function,
