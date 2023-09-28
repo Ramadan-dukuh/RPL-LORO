@@ -254,7 +254,6 @@ section .header{
 }
 
 .f-class{
-   max-width: 100%;
    margin: auto;
    padding: 5rem 2rem;
 }
@@ -293,7 +292,7 @@ footer .column .social a{
 
 footer .column .social a:hover{
    color: #fff;
-   background-color: yellow;
+   background-color: ye;
    border-color: #ccc;
 }
 
