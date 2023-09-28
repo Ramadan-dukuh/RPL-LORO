@@ -339,10 +339,16 @@ footer .column > a:hover{
    header .image{
       grid-area: 1/1/2/2;
    }
-   .swiper-wrapper{
-      grid-template-columns: repeat(2, 1fr);
-   }
    footer{
       grid-template-columns: 9fr 150px;
    }
-}   
+}
+
+@media screen and (max-width: 768px) {
+   .slide-content{
+      margin: 0 10px;
+   }
+   .swiper-navBtn{
+      display: none;
+   }
+}
