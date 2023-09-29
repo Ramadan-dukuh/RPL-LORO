@@ -10,9 +10,34 @@ var swiper = new Swiper(".slide-content", {
     clickable: true,
     dynamicBullet: true,
   },
+
+
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
+  },
+
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    520:{
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    640: {
+      slidesPerView:2,
+      spaceBetween:20,
+    },
+    764: {
+      slidesPerView:3,
+      spaceBetween:25,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 25,
+    },
   },
 });
 
@@ -43,5 +68,5 @@ link3.addEventListener('click', () => {
 });
 
 link4.addEventListener('click', () => {
-  scrollToElement('.f-class');
+  scrollToElement('.slide-content',);
 });

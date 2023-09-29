@@ -154,13 +154,12 @@ section .header{
 
 .slide-container{
    max-width: 1120px;
-   background-color: #18181b;
+   width: 100%;
    padding: 40px 0;
 }
 
 .slide-content{
    margin: 0 40px;
-   background-color: darkblue;
    overflow: hidden;
    border-radius: 25px;
 }
@@ -340,11 +339,11 @@ footer .column > a:hover{
       grid-area: 1/1/2/2;
    }
    footer{
-      grid-template-columns: 9fr 150px;
+      grid-template-columns: 1fr 150px;
    }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 764px) {
    .slide-content{
       margin: 0 10px;
    }
