@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-color: #fcd9d2;
+}
+
+nav {
+  max-width: 1300px;
+  margin: auto;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.nav-logo {
+  max-width: 100px;
+}
+
+.nav-link {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.link a {
+  position: relative;
+  padding-bottom: 0, 75rem;
+  color: #fff;
+}
+
+.link a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.link a:hover::after {
+  width: 70%;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #18181b;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn:hover {
+  background-color: gray;
+  color: black;
+}
+
+.container {
+  color: #323232;
+  text-align: center;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(BG.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.blank,
+.blank-2 {
+  width: 100%;
+  min-height: 60vh;
+  background-color: #323232;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  padding: 1.7rem;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+p {
+  max-width: 600px;
+  line-height: 1.5;
+  padding: 1rem;
+  font-size: 18px;
+}
+
+.second {
+  background-image: url(light_of_dawn_by_bisbiswas_deeg7fq.jpg);
+  background-attachment: fixed;
+  height: 950px;
+  flex-direction: row;
+  gap: 2.5rem;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(1 2fr);
+  width: 320px;
+  gap: 20px;
+  background-color: #fff;
+  border-radius: 0.7rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card .info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card .info img {
+  position: relative;
+  width: 50%;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  margin-top: 20px;
+  border-radius: 50%;
+}
+
+.card .info h3 {
+  font-weight: 700;
+  font-size: 1, 6rem;
+}
+
+@media (max-width: 768px) {
+  .card .info img {
+    grid-template-columns: repeat(1, 1fr);
+    width: auto;
+  }
+
+  .card .info {
+    width: auto;
+  }
+  .card {
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+  }
+}
