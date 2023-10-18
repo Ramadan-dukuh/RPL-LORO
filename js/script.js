@@ -2,7 +2,7 @@ var swiper = new Swiper(".slide-content", {
   slidesPerView: 3,
   spaceBetween: 25,
   loop: true,
-  centerSlide: 'true',
+  centerSlide: 'truw',
   fade: 'true',
   gragCursor: 'true',
   pagination: {
@@ -20,7 +20,7 @@ var swiper = new Swiper(".slide-content", {
   breakpoints: {
     0: {
       slidesPerView: 1,
-      spaceBetween: 20,
+      spaceBetween: 15,
     },
     520:{
       slidesPerView: 2,
@@ -30,7 +30,7 @@ var swiper = new Swiper(".slide-content", {
       slidesPerView:2,
       spaceBetween:20,
     },
-    764: {
+    768: {
       slidesPerView:3,
       spaceBetween:25,
     },
@@ -40,6 +40,7 @@ var swiper = new Swiper(".slide-content", {
     },
   },
 });
+
 
 function scrollToElement(elementSelector, instance = 0) {
   const elements = document.querySelectorAll(elementSelector);
@@ -68,5 +69,24 @@ link3.addEventListener('click', () => {
 });
 
 link4.addEventListener('click', () => {
-  scrollToElement('.slide-content',);
+  scrollToElement('footer',);
+});
+
+
+const card = document.querySelector('#card');
+const cardHeader = card.querySelector('header');
+const resetBtn = document.querySelector('.reset');
+let clicked = false;
+let startTop = card.offsetTop;
+let startLeft = card.offsetLeft;
+let offsetX, offsetY;
+
+cardHeader.addEventListener('mousedown' , (e) => {
+  clicked = true;
+  offsetX = e.clientX - card.offsetLeft;
+  offsetY = e.clientY - card.offsetTop
+});
+
+document.addEventListener('mouseup', () => {
+  clicked = false;
 });

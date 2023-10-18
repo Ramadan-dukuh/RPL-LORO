@@ -22,7 +22,6 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: #fcd9d2;
 }
-
 nav {
   max-width: 1300px;
   margin: auto;
@@ -65,20 +64,94 @@ nav {
   width: 70%;
 }
 
-.btn {
+button {
   padding: 1rem 2rem;
   font-size: 1rem;
   color: #fff;
-  background-color: #18181b;
+  background-color: #757589;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
   border: none;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-.btn:hover {
+button:hover {
   background-color: gray;
   color: black;
+}
+
+button.btn,
+.text{
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+section.active .btn{
+  display: none;
+}
+
+.overlay{
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  pointer-events: none;
+}
+
+section.actitve .overlay{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 380px;
+  width: 100%;
+  padding: 30px 20px;
+  border-radius: 24px;
+  background-color: #fff;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3 ease;
+  transform: translate(-50% -50) scale(1.2);
+}
+
+section.active .text{
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50% -50) scale(1);
+}
+
+.text i{
+  font-size: 70px;
+}
+
+.text h2{
+  margin-top: 20px;
+  font-size: 25px;
+  font-weight: 500;
+  color: #333;
+}
+.text h3{
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+}
+
+.text .buttons{
+  margin-top: 25px;
+}
+
+.text button{
+  font-size: 14px;
+  padding: 12px 20px;
 }
 
 .container {
@@ -151,7 +224,7 @@ p {
 
 .card .info img {
   position: relative;
-  width: 50%;
+  width: 47%;
   height: 150px;
   background-size: cover;
   background-position: center;
@@ -167,7 +240,7 @@ p {
 @media (max-width: 768px) {
   .card .info img {
     grid-template-columns: repeat(1, 1fr);
-    width: auto;
+    width: 49%;
   }
 
   .card .info {
@@ -180,3 +253,21 @@ p {
     margin: 0;
   }
 }
+
+@media (max-width: 500px) {
+  .card .info img {
+    grid-template-columns: repeat(1, 1fr);
+    width: 75%;
+  }
+
+  .card .info {
+    width: 100%;
+  }
+  .card {
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+  }
+}
+
