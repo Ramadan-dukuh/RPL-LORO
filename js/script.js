@@ -73,20 +73,3 @@ link4.addEventListener('click', () => {
 });
 
 
-const card = document.querySelector('#card');
-const cardHeader = card.querySelector('header');
-const resetBtn = document.querySelector('.reset');
-let clicked = false;
-let startTop = card.offsetTop;
-let startLeft = card.offsetLeft;
-let offsetX, offsetY;
-
-cardHeader.addEventListener('mousedown' , (e) => {
-  clicked = true;
-  offsetX = e.clientX - card.offsetLeft;
-  offsetY = e.clientY - card.offsetTop
-});
-
-document.addEventListener('mouseup', () => {
-  clicked = false;
-});

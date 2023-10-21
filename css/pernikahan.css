@@ -19,8 +19,8 @@ a {
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: "Poppins", sans-serif;
-  background-color: #fcd9d2;
+  font-family: "Poppins", sans-serif ;
+  background-color: #fcd9d2
 }
 nav {
   max-width: 1300px;
@@ -224,7 +224,7 @@ p {
 
 .card .info img {
   position: relative;
-  width: 47%;
+  width: 45%;
   height: 150px;
   background-size: cover;
   background-position: center;
@@ -235,6 +235,52 @@ p {
 .card .info h3 {
   font-weight: 700;
   font-size: 1, 6rem;
+}
+
+
+footer{
+  background-color: #32093F;
+  height: 20vh;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  gap: 3.5em;
+  position: relative;
+  left: 0;
+  right: 0;
+}
+
+
+.rating-box{
+  position: relative;
+  background-color: #fff;
+  padding: 25px 50px 35px;
+  border-radius: 8px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.rating-box header{
+  font-size: 20px;
+  color: #ccc;
+  font-weight: 500;
+  text-align: center;
+}
+
+.rating-box .stars{
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.stars i {
+  color: #e6e6e6;
+  font-size: 35px;
+  cursor: pointer;
+  transition: color 0.3 ease;
+}
+
+.stars i.nyala {
+  color: #ff9c1a;
 }
 
 @media (max-width: 768px) {
@@ -256,18 +302,15 @@ p {
 
 @media (max-width: 500px) {
   .card .info img {
-    grid-template-columns: repeat(1, 1fr);
-    width: 75%;
+    
   }
 
   .card .info {
-    width: 100%;
+    width: auto;
   }
   .card {
     width: auto;
     height: auto;
-    padding: 0;
-    margin: 0;
   }
 }
 
