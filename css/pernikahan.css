@@ -20,7 +20,7 @@ body {
   margin: 0;
   min-height: 100vh;
   font-family: "Poppins", sans-serif ;
-  background-color: #fcd9d2
+  background-color: #FCDECA;
 }
 nav {
   max-width: 1300px;
@@ -163,7 +163,7 @@ section.active .text{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url(BG.jpg);
+  background-image: url(BG.png);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -193,53 +193,98 @@ p {
 }
 
 .second {
-  background-image: url(light_of_dawn_by_bisbiswas_deeg7fq.jpg);
+  background-image: url(Cream\ Brown\ Aesthetic\ Couple\ Photo\ Collage.png);
   background-attachment: fixed;
   height: 950px;
-  flex-direction: row;
   gap: 2.5rem;
+  
 }
+
 
 .card {
-  display: grid;
-  grid-template-columns: repeat(1 2fr);
-  width: 320px;
-  gap: 20px;
+  height: 350;
+  width: 350;
+  border-radius: 25px;
+  background-color: #ccc;
+  margin: 0 10px;
+}
+
+.card-container{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card-image {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
   background-color: #fff;
-  border-radius: 0.7rem;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
-  transition: all 0.3s ease;
+  padding: 3px;
 }
 
-.card:hover {
-  transform: scale(1.1);
-}
-
-.card .info {
+.card-image .card-img {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
   width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #fff;
+} 
+
+.image-content,
+.card-content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 10px 14px;
 }
 
-.card .info img {
+.image-content {
   position: relative;
-  width: 45%;
-  height: 150px;
-  background-size: cover;
-  background-position: center;
-  margin-top: 20px;
-  border-radius: 50%;
+  row-gap: 5px;
 }
 
-.card .info h3 {
-  font-weight: 700;
-  font-size: 1, 6rem;
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: yellow;
+  border-radius: 25px 25px 0 25px;
 }
 
+.overlay::before,
+.overlay::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  height: 40px;
+  width: 40px;
+  background-color: yellow;
+}
+
+.overlay::after {
+  border-radius: 0 25px 0 0;
+  background-color: #ccc;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+
+.description {
+  font-size: 14px;
+  text-align: center;
+}
 
 footer{
-  background-color: #32093F;
+  background-color: #EAE9E7;
   height: 20vh;
   display: grid;
   align-items: center;
@@ -253,7 +298,7 @@ footer{
 
 .rating-box{
   position: relative;
-  background-color: #fff;
+  background-color: #DBD1C7;
   padding: 25px 50px 35px;
   border-radius: 8px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
@@ -261,7 +306,7 @@ footer{
 
 .rating-box header{
   font-size: 20px;
-  color: #ccc;
+  color: black;
   font-weight: 500;
   text-align: center;
 }
@@ -283,34 +328,17 @@ footer{
   color: #ff9c1a;
 }
 
-@media (max-width: 768px) {
-  .card .info img {
+
+@media (width < 600px) {
+  .card-container{
+    display: grid;
     grid-template-columns: repeat(1, 1fr);
-    width: 49%;
+    height: 90%;
+    width: 90%;
+
   }
 
-  .card .info {
-    width: auto;
-  }
-  .card {
-    width: auto;
-    height: auto;
-    padding: 0;
-    margin: 0;
+  .card{
+    margin: 20;
   }
 }
-
-@media (max-width: 500px) {
-  .card .info img {
-    
-  }
-
-  .card .info {
-    width: auto;
-  }
-  .card {
-    width: auto;
-    height: auto;
-  }
-}
-
