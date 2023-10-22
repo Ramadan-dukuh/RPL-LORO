@@ -218,7 +218,6 @@ section .header {
 }
 
 .slide-content {
-  width: 100%;
   margin: 0 40px;
   overflow: hidden;
   border-radius: 25px;
