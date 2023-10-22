@@ -20,7 +20,6 @@ body {
   margin: 0;
   min-height: 100vh;
   font-family: "Poppins", sans-serif ;
-  background-color: #FCDECA;
 }
 nav {
   max-width: 1300px;
@@ -46,7 +45,7 @@ nav {
 .link a {
   position: relative;
   padding-bottom: 0, 75rem;
-  color: #fff;
+  color: #ccc;
 }
 
 .link a::after {
@@ -56,7 +55,7 @@ nav {
   width: 0;
   bottom: 0;
   left: 0;
-  background-color: #fff;
+  background-color: #333;
   transition: all 0.3s ease;
 }
 
@@ -163,7 +162,7 @@ section.active .text{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url(BG.png);
+  background-image: url(bg.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -193,7 +192,7 @@ p {
 }
 
 .second {
-  background-image: url(Cream\ Brown\ Aesthetic\ Couple\ Photo\ Collage.png);
+  background-image: url(PP.png);
   background-attachment: fixed;
   height: 950px;
   gap: 2.5rem;
@@ -333,8 +332,7 @@ footer{
   .card-container{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    height: 90%;
-    width: 90%;
+    height: 90%;  
 
   }
 
